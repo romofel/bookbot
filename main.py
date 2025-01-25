@@ -10,6 +10,12 @@ def main():
             else:
                 database[lower_letter] = 1
         print(database)
+
+def generate_report(database):
+    print("--- Begin report of books/frankenstein.txt ---")
+    for row in database:
+        print(row)
+
 if __name__ == "__main__":
     main()
 
