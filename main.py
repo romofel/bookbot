@@ -3,9 +3,13 @@ def main():
     with open(BOOK_PATH) as book:
         database = {}
         book_contents = book.read()
-        words = book_contents.split()
-        print(len(words))
-
+        for letter in book_contents:
+            lower_letter = letter.lower()
+            if lower_letter in database:
+                database[lower_letter] += 1
+            else:
+                database[lower_letter] = 1
+        print(database)
 if __name__ == "__main__":
     main()
 
